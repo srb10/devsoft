@@ -1,0 +1,32 @@
+<head>
+    <title>posts</title>
+</head>
+
+<body><div class="container" style="background-color: lightgoldenrodyellow">
+
+    <div class="container-fluid" style="background-color: yellow; border-width: thick">
+        <h1>Posts</h1><p> in a fluid container. The parent container is just "container"</p>
+        <p>1-Create object into Collection 2-Retrieve an object from Collection and display</p>
+    </div>
+    <div class="container-fluid" style="background-color: cornflowerblue; border-radius: 10px;  border-style: dotted;">
+        I get all posts, the use each-posts over postsTemplate for my display
+        {{#each posts}}
+            {{> postsTemplate}}
+        {{/each}}
+    </div>
+
+    <div>{{ ex1 }}</div>
+
+</div>
+</body>
+
+<template name="postsTemplate">
+    I am postsTemplate...I have a handlebar title template coming in
+    <div class="row-fluid">
+        <div class="col-md-8" style="min-height: 100px; background-color: beige; border-style: dotted; border-width: medium; border-radius: 15px;">
+            {{title}}
+        </div>
+
+    </div>
+</template>
+

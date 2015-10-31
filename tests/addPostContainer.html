@@ -1,0 +1,52 @@
+<head>
+    <title>Adding a Post</title>
+</head>
+
+<body><div class="container" style="background-color: lightgoldenrodyellow">
+    <div class="container-fluid" style="background-color: moccasin ; border-width: thick; border-radius: 10px">
+        <header>
+            <h2>Add a post</h2>
+            <form class="new-resolution">
+                <input type="text" name="titel">
+                <input type="text" name="titleA">
+
+                <input type="submit" value="Submit- im not a button?!">
+            </form>
+        </header>
+    </div>
+
+    <form role="form">
+        <div class="new-resolution form-group">
+            <label for="Title">Title for post</label>
+            <input type="text" name="title" class="form-control"  placeholder="Enter title">
+            <input type="text" name="bod" placeholder="Enter the body">
+
+        </div>
+        <input type="submit" value="Submit- im not a button?">
+    </form>
+
+    <div class="container-fluid" style="background-color: cornflowerblue; border-radius: 10px;  border-style: dotted;">
+        {{#each posts}}
+            {{> postsTemplate2}}
+        {{/each}}
+    </div>
+
+</div>
+</body>
+
+<template name="postsTemplate2">
+    <div class="row-fluid">
+        <div class="col-md-8" style="min-height: 100px; background-color: beige; border-style: dotted; border-width: medium; border-radius: 15px;">
+
+            <div class="{{#if checked}}strikethrough{{/if}}"  style="background-color: chocolate">
+                <input type="checkbox" checked="{{checked}}" class="toggle-checked">
+                <!--                <span class="{{#if checked}}strikethrough{{/if}}">{{title}}</span></div><div class="footer">-->
+                <span class="text">{{title}}</span>
+                <code class="text">{{body1}}</code>
+            </div>
+            <div class="row">
+                <button class="delete btn-danger">Remove</button></div>
+        </div>
+
+    </div>
+</template>
